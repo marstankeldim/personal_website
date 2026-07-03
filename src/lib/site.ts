@@ -8,7 +8,7 @@ export const site = {
   title: "Ayan Ospan — Engineer",
   description:
     "Electrical engineering student at Penn State building at the layer where hardware meets software — distributed systems, robotics, embedded firmware, and AI tooling.",
-  url: "https://ayan-ospan.pages.dev",
+  url: "https://ayan-ospan.com",
   author: "Ayan Ospan",
   keywords: [
     "Ayan Ospan",
