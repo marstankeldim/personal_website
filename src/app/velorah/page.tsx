@@ -14,7 +14,7 @@ const instrument = Instrument_Serif({
 export const metadata: Metadata = {
   title: "Velorah",
   description:
-    "Velorah — a cinematic single-page hero study: fullscreen video, liquid-glass navigation, and Instrument Serif typography.",
+    "A cinematic personal page — how closing the library at night turned into building things: Raft in C++, schedulers, firmware. A design study by Ayan Ospan.",
 };
 
 const VIDEO_SRC =
@@ -23,11 +23,11 @@ const VIDEO_SRC =
 const display = { fontFamily: "var(--font-display)" } as const;
 
 const navLinks = [
-  { label: "Home", active: true },
-  { label: "Studio", active: false },
-  { label: "About", active: false },
-  { label: "Journal", active: false },
-  { label: "Reach Us", active: false },
+  { label: "Story", href: "/velorah", active: true },
+  { label: "Projects", href: "/projects", active: false },
+  { label: "About", href: "/about", active: false },
+  { label: "Research", href: "/research", active: false },
+  { label: "Reach Me", href: "/contact", active: false },
 ];
 
 export default function VelorahPage() {
@@ -40,30 +40,28 @@ export default function VelorahPage() {
       {/* Navigation */}
       <header className="relative z-10 mx-auto flex w-full max-w-7xl flex-row items-center justify-between px-8 py-6">
         <p className="text-3xl tracking-tight text-v-fg" style={display}>
-          Design<sup className="text-xs">®</sup>
+          Ayan<sup className="text-xs">®</sup>
         </p>
-        <nav aria-label="Design" className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Story" className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
-              href="#"
+              href={link.href}
               aria-current={link.active ? "page" : undefined}
               className={`text-sm transition-colors ${
-                link.active
-                  ? "text-v-fg"
-                  : "text-v-muted hover:text-v-fg"
+                link.active ? "text-v-fg" : "text-v-muted hover:text-v-fg"
               }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
-        <button
-          type="button"
+        <Link
+          href="/"
           className="liquid-glass cursor-pointer rounded-full px-6 py-2.5 text-sm text-v-fg transition-transform duration-300 hover:scale-[1.03]"
         >
           Begin Journey
-        </button>
+        </Link>
       </header>
 
       {/* Hero */}
@@ -73,23 +71,36 @@ export default function VelorahPage() {
           style={display}
         >
           Where <em className="not-italic text-v-muted">dreams</em> rise{" "}
-          <em className="not-italic text-v-muted">through the silence.</em>
+          <em className="not-italic text-v-muted">after closing time.</em>
         </h1>
         <p className="animate-fade-rise-delay mt-8 max-w-2xl text-base leading-relaxed text-v-muted sm:text-lg">
           I am designing tools for deep thinkers, bold creators, and quiet
           rebels. Amid the chaos, I build digital spaces for sharp focus and
           inspired work.
         </p>
-        <button
-          type="button"
+        <Link
+          href="/"
           className="liquid-glass animate-fade-rise-delay-2 mt-12 cursor-pointer rounded-full px-14 py-5 text-base text-v-fg transition-transform duration-300 hover:scale-[1.03]"
         >
           Begin Journey
-        </button>
+        </Link>
+
+        {/* Personal story */}
+        <div className="animate-fade-rise-delay-3 mt-20 max-w-xl [text-shadow:0_1px_18px_rgba(0,25,45,0.9),0_1px_4px_rgba(0,25,45,0.6)]">
+          <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-v-muted/80">
+            A note from the library
+          </p>
+          <p className="mt-4 text-sm leading-relaxed text-v-muted sm:text-[15px]">
+            A campus job turned into running the library’s closing shift —
+            lights, final walkthrough, doors. The quiet after close is where I
+            learned to think, and most nights I take it home and build: Raft
+            in C++, schedulers, firmware. I left Astana knowing time doesn’t
+            refill. I’m making the most of what I have left.
+          </p>
+        </div>
       </main>
 
-      {/* Provenance — the one addition beyond the spec, so the page reads as
-          part of the portfolio rather than a real brand. */}
+      {/* Provenance — labels the page as a portfolio piece, not a real brand. */}
       <footer className="absolute inset-x-0 bottom-5 z-10 text-center">
         <p className="font-mono text-[11px] tracking-wide text-v-muted/80">
           A design study ·{" "}
