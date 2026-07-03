@@ -66,8 +66,10 @@ After connecting a custom domain, update `url` in
 ├── scripts/
 │   └── generate-assets.mjs    # SVG → PNG rasterization (sharp, dev-only)
 └── src/
-    ├── app/                   # one folder per route + layout, sitemap, robots, 404
-    │   └── projects/[slug]/   # statically generated project deep-dives
+    ├── app/                   # routes + root layout, sitemap, robots, 404
+    │   ├── (main)/            # the site: all pages wrapped in nav + footer
+    │   │   └── projects/[slug]/   # statically generated project deep-dives
+    │   └── velorah/           # standalone design study (no site chrome)
     ├── components/            # nav, footer, command palette, cards, primitives
     ├── data/                  # ALL site content lives here (typed)
     │   ├── types.ts           # content schemas
@@ -109,3 +111,16 @@ to touch a component to change what the site says.
 - Keyboard: `⌘K` / `Ctrl+K` opens the command palette (pages, projects,
   links, theme). All interactive elements have visible focus states; a
   skip-to-content link is the first tab stop.
+
+## Lab pages
+
+Standalone design studies live outside the `(main)` route group so they can
+own the full viewport without the site's nav and footer. The first one is
+[`/velorah`](src/app/velorah/page.tsx) — a cinematic hero with a fullscreen
+looping background video, liquid-glass buttons, and Instrument Serif type.
+Pattern for adding another: create `src/app/<name>/` with its own
+`page.tsx` + scoped CSS, keep its color tokens namespaced (see the `v-*`
+tokens in `globals.css`), and link it from the command palette's Lab group
+and the sitemap. The background video streams from an external URL; the
+page falls back to its navy backdrop until it loads, and pauses the video
+for visitors who prefer reduced motion.

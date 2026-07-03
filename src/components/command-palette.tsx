@@ -74,6 +74,14 @@ export function CommandPalette() {
         action: go(`/projects/${p.slug}`),
       })),
       {
+        id: "velorah",
+        group: "Lab",
+        label: "Velorah",
+        hint: "cinematic hero study",
+        keywords: "design study video glassmorphism liquid glass concept",
+        action: go("/velorah"),
+      },
+      {
         id: "theme",
         group: "Actions",
         label: resolvedTheme === "dark" ? "Switch to light mode" : "Switch to dark mode",

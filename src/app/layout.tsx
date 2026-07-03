@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Newsreader } from "next/font/google";
 import { ThemeProvider } from "next-themes";
-import { Nav } from "@/components/nav";
-import { Footer } from "@/components/footer";
-import { CommandPalette } from "@/components/command-palette";
 import { site, links } from "@/lib/site";
 import "./globals.css";
 
@@ -85,18 +82,7 @@ export default function RootLayout({
         className={`${inter.variable} ${newsreader.variable} ${jetbrains.variable} font-sans`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <a
-            href="#main"
-            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-bg"
-          >
-            Skip to content
-          </a>
-          <Nav />
-          <main id="main" className="min-h-screen">
-            {children}
-          </main>
-          <Footer />
-          <CommandPalette />
+          {children}
         </ThemeProvider>
         <script
           type="application/ld+json"

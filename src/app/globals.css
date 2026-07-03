@@ -23,6 +23,16 @@
   --font-mono: var(--font-jetbrains), ui-monospace, "SF Mono", monospace;
 }
 
+/*
+ * Velorah design study (/velorah) — fixed cinematic palette, deliberately
+ * theme-invariant (the page is dark in both site themes).
+ */
+@theme {
+  --color-v-bg: hsl(201 100% 13%);
+  --color-v-fg: hsl(0 0% 100%);
+  --color-v-muted: hsl(240 4% 66%);
+}
+
 :root {
   --bg: #fafaf8;
   --bg-elevated: #ffffff;

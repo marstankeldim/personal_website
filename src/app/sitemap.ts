@@ -27,5 +27,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...pages, ...projectPages];
+  const labPages = [
+    {
+      url: `${site.url}/velorah/`,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
+  ];
+
+  return [...pages, ...projectPages, ...labPages];
 }
