@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#1a1816"/>
+  <!-- Stylized "A" as a control-system waveform peak -->
+  <path d="M12 46 L26 16 h4 L16 46 Z" fill="#dd9455"/>
+  <path d="M52 46 L38 16 h-4 L48 46 Z" fill="#f5f2ee"/>
+  <rect x="24" y="35" width="16" height="4" rx="2" fill="#f5f2ee"/>
+</svg>
