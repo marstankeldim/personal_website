@@ -131,8 +131,6 @@ export function CommandPalette() {
     if (open) inputRef.current?.focus();
   }, [open]);
 
-  useEffect(() => setActive(0), [query]);
-
   // Keep the active option visible while arrowing through the list.
   useEffect(() => {
     listRef.current
@@ -163,7 +161,10 @@ export function CommandPalette() {
           <input
             ref={inputRef}
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setActive(0);
+            }}
             onKeyDown={(e) => {
               if (e.key === "ArrowDown") {
                 e.preventDefault();

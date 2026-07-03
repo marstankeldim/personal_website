@@ -22,10 +22,10 @@ const secondary = [
 
 export function Nav() {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
-
-  // Close the mobile menu on navigation.
-  useEffect(() => setOpen(false), [pathname]);
+  // The menu remembers which path it was opened on, so navigating anywhere
+  // closes it by derivation — no effect needed.
+  const [openForPath, setOpenForPath] = useState<string | null>(null);
+  const open = openForPath === pathname;
 
   // Lock body scroll while the mobile menu is open.
   useEffect(() => {
@@ -89,7 +89,7 @@ export function Nav() {
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
+            onClick={() => setOpenForPath(open ? null : pathname)}
             className="flex h-8 w-8 items-center justify-center rounded-md text-muted transition-colors hover:text-fg md:hidden"
           >
             {open ? <X size={17} aria-hidden /> : <Menu size={17} aria-hidden />}
