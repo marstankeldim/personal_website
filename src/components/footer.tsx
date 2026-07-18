@@ -17,6 +17,7 @@ const social = [
   { href: links.linkedin, label: "LinkedIn" },
   { href: links.x, label: "X / Twitter" },
   { href: `mailto:${links.email}`, label: "Email" },
+  { href: links.kazakhstan, label: "Kazakhstan" },
 ];
 
 export function Footer() {

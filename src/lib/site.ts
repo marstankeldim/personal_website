@@ -31,5 +31,6 @@ export const links = {
   emailAcademic: "ospan@psu.edu",
   orcid: "https://orcid.org/0009-0005-2036-9088",
   chronos: "https://chronos-online.com",
+  kazakhstan: "https://home.ayan-ospan.com",
   resumePdf: "/resume/Ayan_Ospan_Resume.pdf",
 } as const;
