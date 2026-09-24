@@ -83,6 +83,12 @@ export const leadership: LeadershipItem[] = [
 
 export const awards: Award[] = [
   {
+    title: "Min Kim Scholarship",
+    issuer: "International Test and Evaluation Association",
+    year: "2026",
+    detail: "$2,500 + one-year membership, for the CETA research paper and presentation",
+  },
+  {
     title: "Top 3 Nationally — Senior Challenge",
     issuer: "World Robot Olympiad, Kazakhstan",
     year: "2023",

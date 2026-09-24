@@ -36,8 +36,8 @@ const story: { heading: string; paragraphs: string[] }[] = [
   {
     heading: "Products, because engineering should ship",
     paragraphs: [
-      "The entrepreneurship minor isn't decorative. I founded Chronos, an AI scheduling platform for students, and took it through Penn State's LaunchBox accelerator programs — 30+ customer discovery interviews, a beta cohort, $2,000 in competitive funding, and 100+ active users. Building alone from zero teaches a kind of engineering judgment that coursework can't: every architecture decision has a cost you personally pay.",
-      "What motivates me is the full loop — from the physics of a signal to the system that ships. I want to build software for systems that interact with the physical world and have to be trusted: robots, infrastructure, transportation, tooling for AI. That's the work I'm looking for as a software engineer.",
+      "The entrepreneurship minor isn't decorative. I founded Chronos, an AI scheduling platform for students, and took it through Penn State's LaunchBox accelerator programs — 30+ customer discovery interviews, a beta cohort, $2,000 in competitive funding, and 100+ signed-up users. Building alone from zero teaches a kind of engineering judgment that coursework can't: every architecture decision has a cost you personally pay. I've also authored and presented independent policy-grounded research at a national workshop, and won a competitive scholarship for it.",
+      "What motivates me is the full loop — from the physics of a signal to the system that ships. I want to build software for systems that interact with the physical world and have to be trusted: robots, infrastructure, transportation, tooling for AI. That's the work I'm looking for.",
     ],
   },
 ];
@@ -53,7 +53,7 @@ export default function AboutPage() {
             <Em>feedback loops</Em>.
           </>
         }
-        lede="Engineer, builder, researcher. Electrical engineering at Penn State, class of December 2027 — currently interning at Wabtec, researching autonomous systems, and shipping my own products."
+        lede="Engineer, builder, researcher. Electrical engineering at Penn State, class of December 2027 — researching autonomous systems, shipping my own products, and most recently interning at Wabtec."
       />
 
       <div className="mx-auto max-w-6xl px-5 pb-8 md:px-8">

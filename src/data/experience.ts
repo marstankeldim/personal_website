@@ -11,7 +11,7 @@ export const experience: ExperienceItem[] = [
     summary:
       "Locomotive engineering at Wabtec's LKZ facility, which assembles the ES44ACi — a 4,400 hp Evolution Series freight locomotive — for Kazakhstan's national railway.",
     bullets: [
-      "Performed wire routing for the ES44ACi auxiliary cabin's electronic controls in Siemens NX, localizing the US hardware design to Kazakhstani specifications and locally sourced components alongside electrical integration and controls engineers",
+      "Performed wire routing for the ES44ACi auxiliary cabin's electronic controls in Siemens NX, localizing the US hardware design to Kazakhstani specifications alongside electrical integration and controls engineers",
       "Identified and filed an approved Product Change Request correcting 3 erroneous helper's-console harness callouts in official design documentation — catching an error that would have caused incorrect assembly on production units",
       "Authored from-scratch assembly instructions for the first ES44ACi auxiliary cabin localization at LKZ, coordinating across technicians, sourcing, mechanical, and electrical integration engineers",
       "Authored 716 operator-facing HMI error messages covering the locomotive's thermal, sensor, mechanical, and electrical fault spectrum",
@@ -22,7 +22,7 @@ export const experience: ExperienceItem[] = [
   {
     company: "SYNK",
     role: "Product Engineering Intern",
-    period: "May 2026 — Present",
+    period: "May 2026",
     location: "San Francisco, CA",
     kind: "Internship",
     summary:
@@ -44,8 +44,9 @@ export const experience: ExperienceItem[] = [
       "Founded and built an AI-powered scheduling platform for students — product, engineering, and business, solo.",
     bullets: [
       "Architected and shipped the full platform: constraint-based AI scheduling engine, React/TypeScript frontend, Supabase backend, Cloudflare Pages/Workers deployment",
-      "Grew to 100+ active users; secured $2,000 in competitive funding after completing the Idea TestLab and MVP DevLab accelerator programs",
+      "Grew to 100+ signed-up users; secured $2,000 in competitive funding after completing the Idea TestLab and MVP DevLab accelerator programs",
       "Conducted 30+ customer discovery interviews; 74% of students surveyed reported significant planning-related stress",
+      "Iterated the drag-and-drop calendar view based on direct beta user feedback",
     ],
     tech: ["TypeScript", "React", "Supabase", "Cloudflare"],
     related: ["chronos"],
@@ -61,7 +62,7 @@ export const experience: ExperienceItem[] = [
     bullets: [
       "Implemented and tuned PID control for closed-loop trajectory tracking; integrated odometry, IMU, and camera streams via sensor fusion for real-time state estimation",
       "Designed and executed 100+ controlled experiments validating accuracy and stability under simulated sensor noise — improving trajectory stability by 28% through iterative refinement",
-      "Operated a multi-process ROS node graph on Linux, managing real-time publisher/subscriber timing in a concurrent execution environment",
+      "Operated a multi-process ROS node graph on Linux, managing real-time publisher/subscriber timing",
     ],
     tech: ["ROS", "Python", "Duckietown", "Docker", "Linux"],
   },

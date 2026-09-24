@@ -7,7 +7,7 @@ import { links } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch — email, LinkedIn, GitHub, or X. Open to Summer 2027 internship conversations in software, robotics, and controls.",
+    "Get in touch — email, LinkedIn, GitHub, or X. Seeking Summer 2027 internships in robotics, software, controls, or systems engineering.",
 };
 
 const channels = [
@@ -59,7 +59,7 @@ export default function ContactPage() {
             The inbox is <Em>open</Em>.
           </>
         }
-        lede="Open to conversations about Summer 2027 internships in software, robotics, or controls — and to anyone building something interesting with a feedback loop in it."
+        lede="Seeking Summer 2027 internships in robotics, software, or controls — also open to systems engineering and software-intensive hardware roles, and to anyone building something interesting with a feedback loop in it."
       />
 
       <div className="mx-auto max-w-6xl px-5 pb-24 md:px-8">
