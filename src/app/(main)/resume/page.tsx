@@ -115,6 +115,23 @@ export default function ResumePage() {
               ))}
             </section>
 
+            {/* Research */}
+            <section className="pt-8">
+              <h3 className="microlabel">Research</h3>
+              <ul className="mt-4 space-y-3">
+                <li className="text-[13.5px] leading-relaxed">
+                  <span className="font-medium text-fg">
+                    Ontology-Grounded Test Adequacy (CETA).
+                  </span>{" "}
+                  <span className="text-muted">
+                    Formal framework for cyber test adequacy over an OWL 2
+                    knowledge graph — independently authored and presented at
+                    the ITEA Cybersecurity T&amp;E Workshop 2026.
+                  </span>
+                </li>
+              </ul>
+            </section>
+
             {/* Selected projects */}
             <section className="pt-8">
               <h3 className="microlabel">Selected Projects</h3>

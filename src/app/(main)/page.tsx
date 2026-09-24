@@ -3,15 +3,16 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { Em, Section } from "@/components/section";
 import { ProjectCard } from "@/components/project-card";
+import { awards } from "@/data/leadership";
 import { featuredProjects } from "@/data/projects";
 import { links } from "@/lib/site";
 
 const currently = [
   {
-    label: "Engineer Intern @ Wabtec",
+    label: "Presented CETA @ ITEA",
     detail:
-      "Localizing the ES44ACi locomotive's auxiliary cabin — wire routing in Siemens NX, assembly documentation, and an approved PCR.",
-    href: "/experience",
+      "Independent research on ontology-grounded cyber test adequacy — presented at the ITEA Cybersecurity T&E Workshop 2026 and awarded the Min Kim Scholarship.",
+    href: "/research",
   },
   {
     label: "Researcher @ CASA-Goes Lab",
@@ -55,10 +56,10 @@ export default function HomePage() {
           <Reveal delay={0.16}>
             <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
               Where a control loop is only as good as the code running it, and
-              code has to answer to physics. Engineer intern at Wabtec,
-              undergraduate researcher in autonomous systems, founder of
-              Chronos — currently writing distributed systems in C++ and
-              benchmarking infrastructure for LLMs.
+              code has to answer to physics. Undergraduate researcher in
+              autonomous systems, founder of Chronos, and Summer 2026 engineer
+              intern at Wabtec — currently writing distributed systems in C++
+              and benchmarking infrastructure for LLMs.
             </p>
           </Reveal>
           <Reveal delay={0.24}>
@@ -160,7 +161,7 @@ export default function HomePage() {
             { value: "28%", label: "trajectory stability gained in autonomy research" },
             { value: "100+", label: "users on Chronos, with $2K in competitive funding" },
             { value: "716", label: "locomotive HMI error messages authored at Wabtec" },
-            { value: "7", label: "robotics & engineering awards, national to international" },
+            { value: String(awards.length), label: "awards across robotics, research, and startups" },
           ].map((stat, i) => (
             <Reveal key={stat.label} delay={i * 0.05}>
               <div>
@@ -180,10 +181,12 @@ export default function HomePage() {
       <Section index="04" title="Get in touch">
         <Reveal>
           <p className="max-w-2xl text-lg leading-relaxed text-muted md:text-xl">
-            Open to conversations about{" "}
+            Seeking{" "}
             <span className="text-fg">Summer 2027 internships</span> in
-            software, robotics, or controls — and about distributed systems,
-            embedded projects, or anything with a feedback loop in it.
+            robotics, software, or controls — also open to systems
+            engineering and software-intensive hardware roles. Always up for a
+            conversation about distributed systems, embedded projects, or
+            anything with a feedback loop in it.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a

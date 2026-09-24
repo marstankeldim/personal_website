@@ -26,6 +26,7 @@ export const projects: Project[] = [
       "Linearizable operations: reads go through the replicated log, so a GET observes exactly the writes committed before it — even across leader changes",
       "Quorum safety: with a majority of nodes down, the cluster refuses writes rather than diverging (CP)",
       "Client redirects: clients may contact any node; non-leaders answer REDIRECT and the CLI follows automatically",
+      "Verified by 41 unit tests and a Python integration harness that kills and restarts real cluster processes",
     ],
     metrics: [
       { value: "0", label: "external runtime dependencies" },
@@ -44,7 +45,7 @@ export const projects: Project[] = [
         heading: "Correctness under failure",
         body: [
           "The interesting work is in the failure paths. A deposed leader stranded behind a network partition can never serve stale data as committed, because reads are serialized through the log like writes. A node that crashes mid-write recovers by replaying its log and rejoining the cluster; CRC32 checks detect torn tail writes and discard them safely.",
-          "The project is exercised through a live cluster script — start three nodes, write through the CLI, kill the leader mid-flight, and verify that a new leader answers with data intact.",
+          "The project is exercised through a live cluster script — start three nodes, write through the CLI, kill the leader mid-flight, and verify that a new leader answers with data intact. Behind that sit 41 unit tests and a Python integration harness that kills and restarts real cluster processes.",
         ],
       },
     ],
@@ -125,7 +126,7 @@ export const projects: Project[] = [
     ],
     link: "https://chronos-online.com",
     summary:
-      "A constraint-based AI scheduling engine that turns tasks, goals, and calendar commitments into optimized weekly schedules. Built solo as a startup through Penn State's Happy Valley LaunchBox — 100+ active users and $2,000 in competitive funding.",
+      "A constraint-based AI scheduling engine that turns tasks, goals, and calendar commitments into optimized weekly schedules. Built solo as a startup through Penn State's Happy Valley LaunchBox — 100+ signed-up users and $2,000 in competitive funding.",
     highlights: [
       "Constraint-based scheduling engine with energy- and priority-aware placement, break insertion, and conflict detection — the AI builds a full week schedule in under 10 seconds",
       "35% reduction in conflicting event generation during internal testing",
@@ -135,7 +136,7 @@ export const projects: Project[] = [
       "30+ customer discovery interviews — 74% of students surveyed reported significant planning-related stress; $2,000 secured from Happy Valley LaunchBox",
     ],
     metrics: [
-      { value: "100+", label: "active users" },
+      { value: "100+", label: "signed-up users" },
       { value: "$2,000", label: "competitive funding" },
       { value: "<10 s", label: "to generate a week schedule" },
     ],
@@ -314,6 +315,66 @@ export const projects: Project[] = [
         body: [
           "Firmware is where software stops being abstract. A PWM duty cycle is a register value with a physical consequence; a missed interrupt is a visible glitch. This project is a deliberate tour of the STM32 peripheral set — GPIO, timers, UART, PWM — written in C against the HAL, with the interesting bugs living at the hardware–software interface.",
           "Debugging happens where the evidence is: SWO trace output at 115200 baud for live telemetry, and GDB at the register level when behavior and intent disagree. Six such interface bugs were isolated and fixed through systematic failure-mode analysis.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "kazakhstan-atlas",
+    title: "Cinematic WebGL Atlas of Kazakhstan",
+    tagline:
+      "A globe intro that dives into explorable Kazakhstan locations, built from real elevation data, satellite imagery, and PBR materials.",
+    period: "Jul 2026",
+    status: "Active",
+    category: "Graphics",
+    tech: ["JavaScript", "Three.js", "WebGL", "Basis Universal"],
+    github: "https://github.com/marstankeldim/almaty",
+    summary:
+      "A cinematic atlas of Kazakhstan in the browser. Terrain is generated from real digital elevation model data and draped with satellite imagery, then shaded with PBR materials and image-based lighting; textures go through a compressed-texture (Basis Universal) asset pipeline.",
+    highlights: [
+      "Globe intro that dives into explorable Kazakhstan locations",
+      "Terrain generated from real digital elevation model (DEM) data and draped with satellite imagery",
+      "PBR materials with image-based lighting",
+      "Compressed-texture asset pipeline built on Basis Universal",
+    ],
+    sections: [
+      {
+        heading: "Real geography, not a backdrop",
+        body: [
+          "The atlas opens on a globe and dives into explorable locations, among them the Trans-Ili Alatau range above Almaty and Big Almaty Lake — each rebuilt from real elevation data and satellite imagery rather than modeled by hand.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "living-land",
+    title: "The Living Land",
+    tagline:
+      "An interactive WebGL gallery of six Kazakhstan landscapes with real-time video-texture compositing.",
+    period: "Jul 2026",
+    status: "Completed",
+    category: "Graphics",
+    tech: ["Vanilla JavaScript", "WebGL"],
+    github: "https://github.com/marstankeldim/preview_kaz",
+    summary:
+      "Six Kazakhstan landscapes, each photograph composited in real time with timelapse video, water displacement, and light/mist animation through scene-specific mattes — in plain JavaScript and WebGL, with full keyboard and reduced-motion support.",
+    highlights: [
+      "Real-time WebGL compositing of photography with timelapse skies, water displacement, and light/mist animation, confined by scene-specific mattes",
+      "Mobile photography transfer cut from 7.14 MB to 2.15 MB while desktop keeps the original 2400px images; lighter 1280px video loops below the mobile breakpoint",
+      "WebGL portraits start lazily near the viewport, and video pauses when off-screen or in a hidden tab",
+      "Keyboard navigation with fullscreen previous/next controls, Escape handling, and a reduced-motion mode that falls back to still photographs",
+    ],
+    metrics: [
+      { value: "6", label: "landscapes composited in WebGL" },
+      { value: "−70%", label: "mobile photography transfer (7.14 → 2.15 MB)" },
+      { value: "0", label: "build steps or runtime dependencies" },
+    ],
+    sections: [
+      {
+        heading: "Motion only where the world moves",
+        body: [
+          "Each landscape starts as a photograph. WebGL adds restrained motion — timelapse skies, water displacement, mist, and light — and scene-specific mattes keep it where it belongs: water motion is perspective-scaled and confined to the lake mattes, so reflections move without bending shorelines, trees, or foreground objects.",
+          "The site is plain JavaScript and WebGL with no build step or runtime dependencies. Mobile visitors get lighter photography and 1280px video loops, video pauses whenever it is out of view, and visitors who prefer reduced motion get the still photographs.",
         ],
       },
     ],

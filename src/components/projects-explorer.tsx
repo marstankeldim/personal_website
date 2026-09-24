@@ -13,6 +13,7 @@ const categories: ProjectCategory[] = [
   "Embedded",
   "Robotics",
   "Hardware",
+  "Graphics",
   "Data",
 ];
 

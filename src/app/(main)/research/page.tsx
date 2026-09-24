@@ -9,7 +9,7 @@ import { links } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "Undergraduate research in autonomous systems with assurances — ROS perception and control pipelines, simulation-first validation, and discrete event systems.",
+    "Ontology-grounded cyber test adequacy research presented at ITEA 2026, plus autonomous-systems research — ROS perception and control, simulation-first validation, and discrete event systems.",
 };
 
 export default function ResearchPage() {
@@ -19,10 +19,10 @@ export default function ResearchPage() {
         kicker="Research"
         title={
           <>
-            Autonomy you can <Em>trust</Em>, not just demo.
+            Systems you can <Em>trust</Em>, not just demo.
           </>
         }
-        lede="My research sits at the intersection of robotics and rigor: building perception and control systems for autonomous robots, then validating — empirically and formally — that they behave when the world doesn't cooperate."
+        lede="My research sits at the intersection of autonomy and rigor: building perception and control systems for autonomous robots, validating — empirically and formally — that they behave when the world doesn't cooperate, and asking when a system has actually been tested enough."
       />
 
       <div className="mx-auto max-w-6xl px-5 md:px-8">
@@ -89,7 +89,10 @@ export default function ResearchPage() {
         </div>
       </div>
 
-      <Section index="03" title="Interests & directions">
+      <Section
+        index={String(researchAreas.length + 1).padStart(2, "0")}
+        title="Interests & directions"
+      >
         <div className="grid gap-10 lg:grid-cols-[1fr_280px]">
           <ul className="max-w-2xl space-y-4">
             {researchInterests.map((interest) => (
@@ -105,8 +108,8 @@ export default function ResearchPage() {
             <div className="h-fit rounded-lg border border-line p-6">
               <p className="microlabel">Scholarly identity</p>
               <p className="mt-4 text-sm leading-relaxed text-muted">
-                No publications yet — the goal is to change that. Research
-                identifier registered and ready:
+                First paper: CETA, independently authored and presented at the
+                ITEA Cybersecurity T&amp;E Workshop 2026. Research identifier:
               </p>
               <a
                 href={links.orcid}

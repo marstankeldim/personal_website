@@ -2,6 +2,21 @@ import type { ResearchArea } from "./types";
 
 export const researchAreas: ResearchArea[] = [
   {
+    title: "Ontology-Grounded Test Adequacy (CETA)",
+    role: "Independent, solo-authored research",
+    organization: "ITEA Cybersecurity T&E Workshop 2026, Bangor Plaza / Keyport, WA",
+    period: "Presented Sep 16, 2026",
+    body: [
+      "I authored and presented a formal framework that recasts cyber test-and-evaluation sufficiency as a decidable question over an OWL 2 knowledge graph, rather than the checklist-based coverage tracking currently used in DoD cyber developmental test & evaluation.",
+      "The framework aligns system, threat, weakness, and mission sub-ontologies with SWRL-style inference rules to derive admissible attack paths terminating at mission-essential functions, defines a formal “semantic test adequacy” criterion, and proposes an ontology-constrained retrieval-augmented LLM component for gap-closure test proposal. It engages directly with current DoD/DoW policy (Cyber DT&E Guidebook v3.0, DoW Manual 5000.103). It is explicitly a concept-and-methodology paper — no empirical results are claimed.",
+    ],
+    bullets: [
+      "Awarded the Min Kim Scholarship ($2,500 + one-year ITEA membership) as the workshop's competitively selected student presenter",
+      "Delivered a scripted, rehearsed 10-minute technical talk with live Q&A to a national audience of technical and policy stakeholders",
+    ],
+    tech: ["OWL 2", "SWRL", "Knowledge Graphs", "Attack-Path Analysis", "Cyber T&E"],
+  },
+  {
     title: "Controlling Autonomous Systems with Assurances",
     role: "Undergraduate Research Assistant",
     organization: "CASA-Goes Lab, Penn State",

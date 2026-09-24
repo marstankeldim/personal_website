@@ -7,6 +7,7 @@ export type ProjectCategory =
   | "Embedded"
   | "Robotics"
   | "Hardware"
+  | "Graphics"
   | "Data";
 
 export interface ProjectSection {
