@@ -4,17 +4,18 @@ export const researchAreas: ResearchArea[] = [
   {
     title: "Ontology-Grounded Test Adequacy (CETA)",
     role: "Independent, solo-authored research",
-    organization: "ITEA Cybersecurity T&E Workshop 2026, Bangor Plaza / Keyport, WA",
+    organization: "ITEA Cybersecurity T&E Workshop 2026, Bangor Plaza Conference Center, Keyport, WA",
     period: "Presented Sep 16, 2026",
     body: [
-      "I authored and presented a formal framework that recasts cyber test-and-evaluation sufficiency as a decidable question over an OWL 2 knowledge graph, rather than the checklist-based coverage tracking currently used in DoD cyber developmental test & evaluation.",
-      "The framework aligns system, threat, weakness, and mission sub-ontologies with SWRL-style inference rules to derive admissible attack paths terminating at mission-essential functions, defines a formal “semantic test adequacy” criterion, and proposes an ontology-constrained retrieval-augmented LLM component for gap-closure test proposal. It engages directly with current DoD/DoW policy (Cyber DT&E Guidebook v3.0, DoW Manual 5000.103). It is explicitly a concept-and-methodology paper — no empirical results are claimed.",
+      "I authored and presented CETA (Cyber Evaluation Test Adequacy), a formal framework that recasts cyber test-and-evaluation sufficiency as a decidable question over an OWL 2 knowledge graph. Coverage in DoD cyber developmental test & evaluation is currently enumerative — techniques ticked off a matrix, requirements checked against a spreadsheet — and those counts break whenever the system model changes. The artifacts that would make traceability mechanical sit in vocabularies that don't map to each other: SysML/UAF for architecture, MITRE ATT&CK for adversary behavior, CWE/CVE for weaknesses, and criticality analyses for missions.",
+      "The framework aligns four modular OWL 2 sub-ontologies — system architecture, threat, weakness, and mission — with SWRL-style inference rules that derive every admissible attack path ending at a mission-essential function. Under its “semantic test adequacy” criterion, a test suite is adequate exactly when every such path above a criticality threshold is covered by an executable test; remaining risk becomes an explicitly enumerated gap set instead of an unexamined remainder. For gap closure, the paper proposes a retrieval-augmented LLM that suggests candidate tests but can only emit instances of declared ontology classes, so the same reasoner that found a gap checks every proposal, and malformed proposals are rejected before a human reviews them.",
+      "The paper defines a metric suite — semantic coverage ratio, gap-set cardinality, false-test rate, gap-closure rate, re-materialization time after model revision, and traceability completeness — and a staged evaluation design over open reference architectures, with four stated hypotheses and their falsification conditions. It draws on 18 references, builds on current DoD/DoW policy (Cyber DT&E Guidebook v3.0, DoW Manual 5000.103, DoD Cyber Table Top Guide v3.0), and addresses a gap DoD acknowledges: its own documents describe the existing DoD ontology, OACRA, as low technology readiness level. As the workshop's call requested, it is a concept-and-methodology paper — no empirical results are claimed.",
     ],
     bullets: [
-      "Awarded the Min Kim Scholarship ($2,500 + one-year ITEA membership) as the workshop's competitively selected student presenter",
+      "Awarded the Min Kim Scholarship ($2,500 + one-year ITEA membership) as the one student presenter selected from all submitted abstracts",
       "Delivered a scripted, rehearsed 10-minute technical talk with live Q&A to a national audience of technical and policy stakeholders",
     ],
-    tech: ["OWL 2", "SWRL", "Knowledge Graphs", "Attack-Path Analysis", "Cyber T&E"],
+    tech: ["OWL 2", "SWRL", "Knowledge Graphs", "Attack-Path Analysis", "MITRE ATT&CK", "RAG", "Cyber T&E"],
   },
   {
     title: "Controlling Autonomous Systems with Assurances",
