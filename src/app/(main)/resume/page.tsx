@@ -126,7 +126,8 @@ export default function ResumePage() {
                   <span className="text-muted">
                     Formal framework for cyber test adequacy over an OWL 2
                     knowledge graph — independently authored and presented at
-                    the ITEA Cybersecurity T&amp;E Workshop 2026.
+                    the ITEA Cybersecurity T&amp;E Workshop 2026, Keyport, WA,
+                    Sept. 2026.
                   </span>
                 </li>
               </ul>
