@@ -128,17 +128,18 @@ export const projects: Project[] = [
     summary:
       "A constraint-based AI scheduling engine that turns tasks, goals, and calendar commitments into optimized weekly schedules. Built solo as a startup through Penn State's Happy Valley LaunchBox — 100+ signed-up users and $2,000 in competitive funding.",
     highlights: [
-      "Constraint-based scheduling engine with energy- and priority-aware placement, break insertion, and conflict detection — the AI builds a full week schedule in under 10 seconds",
+      "Constraint-based scheduling engine with energy- and priority-aware placement, break insertion, and conflict detection — in internal testing, the AI builds a full week schedule in under 10 seconds",
       "35% reduction in conflicting event generation during internal testing",
       "Full-stack production system: React + TypeScript frontend, Supabase auth/DB/edge functions, deployed on Cloudflare Pages and Workers",
       "Recurring events with exception handling, undo/redo history, drag-and-drop scheduling, .ics calendar import/export, and full DST-aware timezone support",
+      "Iterated the drag-and-drop calendar view based on direct beta user feedback, after early testers found the initial scheduling flow difficult to adjust manually",
       "Security hardening: CSP headers, row-level security policies, environment validation; CI/CD via GitHub Actions",
       "30+ customer discovery interviews — 74% of students surveyed reported significant planning-related stress; $2,000 secured from Happy Valley LaunchBox",
     ],
     metrics: [
       { value: "100+", label: "signed-up users" },
       { value: "$2,000", label: "competitive funding" },
-      { value: "<10 s", label: "to generate a week schedule" },
+      { value: "<10 s", label: "to generate a week schedule in internal testing" },
     ],
     sections: [
       {
