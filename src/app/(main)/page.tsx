@@ -160,7 +160,7 @@ export default function HomePage() {
           {[
             { value: "28%", label: "trajectory stability gained in autonomy research" },
             { value: "100+", label: "users on Chronos, with $2K in competitive funding" },
-            { value: "716", label: "locomotive HMI error messages authored at Wabtec" },
+            { value: "1,502", label: "locomotive HMI error messages authored at Wabtec" },
             { value: String(awards.length), label: "awards across robotics, research, and startups" },
           ].map((stat, i) => (
             <Reveal key={stat.label} delay={i * 0.05}>
